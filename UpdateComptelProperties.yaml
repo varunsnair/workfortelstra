@@ -1,0 +1,10 @@
+vars:
+    database_ip_address: "{{ database_ip_address }}"
+
+# Copy files from one server to another
+
+
+- lineinfile:
+	path: /etc/selinux/config
+    regexp: '^DB_IP_ADDRESS='
+    line: 'DB_IP_ADDRESS=' + database_ip_address
