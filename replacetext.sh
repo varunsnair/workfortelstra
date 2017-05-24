@@ -7,6 +7,7 @@ function escape_slashes {
 }
 
 function change_line {
+    echo "Today's date is" >> foo.txt
     local OLD_LINE_PATTERN=$1;
     local NEW_LINE=$2;
     local FILE=$3
