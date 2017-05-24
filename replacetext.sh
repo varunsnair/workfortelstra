@@ -14,5 +14,8 @@ function change_line {
     local NEW=$(echo "${NEW_LINE}" | escape_slashes)
     sed -i '/'"${OLD_LINE_PATTERN}"'/s/.*/'"${NEW}"'/' "${FILE}"
 }
+echo "$1 : "$1 >> foo.txt
+echo "$2 : "$2 >> foo.txt
+echo "$3 : "$3 >> foo.txt
 
 change_line $1 $2 $3
